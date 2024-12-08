@@ -3,7 +3,8 @@ import os
 
 def save_features_to_files(features, files):
     def save(feature, file):
-        with open(f'/features/{file}', 'wb') as f:
+        path = f'features/{file}'
+        with open(path, 'wb') as f:
             np.save(f, feature, allow_pickle=True)
         
     for i, file in enumerate(files):
